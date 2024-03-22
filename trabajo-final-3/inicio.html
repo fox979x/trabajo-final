@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/trabajo.css">
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar"></div>
+        <div>
+            <a href="website.html"> the play clinic</a>
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <button class="loginbtn" onclick="document.getElementById('login-form').style.display='block'"
+                    style="width: auto;">
+                        login
+                    </button>
+                </li>
+            </ul>
+        </nav>
+       </div>
+       <div id="login-form" class="login-page">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" onclick="login()"class='toggle-btn'>
+                        log in
+                    </button>
+                    <button type="button" onclick="register()" class="toggle-btn">
+                        register
+                    </button>
+                </div>
+            <form id="login" class="input-group-login">
+                <input type="text" class="input-field" placeholder="Email id" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="checkbox"> <samp>Remember Password</samp>
+                <button type="submit" class="submit-btn">
+                    login
+                </button>
+            </form>
+            <form id="register" class="input-group-register">
+                <input type="text" class="input-field" placeholder="First Name" required>
+                <input type="text" class="input-field" placeholder="Last Name" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"> <samp>I agree to the terms and conditions</samp>
+                <button type="submit" class="submit-btn">
+                    Register
+                </button>
+            </form>
+        </div>
+       </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        var z=document.getElementById('btn');
+        function register() {
+            
+            x.style.left='-400px';
+            y.style.left='50px';
+            z.style.left='110px';
+        }
+        function login(){
+
+            x.style.left='50px';
+            y.style.left='450px';
+            z.style.left='0px';
+        }
+    </script>
+    <script>
+
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event){
+
+            if (event.target == modal){
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <div class="slider">
+        <div class="slide">
+          <img src="/img/ps4.jpg" alt="PS4">
+        </div>
+        <div class="slide">
+          <img src="/img/god of.jpg" alt="GOD OF WAR">
+        </div>
+        <div class="slide">
+          <img src="/img/arksurvivalascend2023.jpg" alt="ARK">
+        </div>
+        <div class="slide">
+          <img src="/img/xbox.jpg" alt="XBOX">
+        </div>
+        <div class="slide">
+          <img src="/img/halo_.jpg" alt="HALO">
+        </div>
+        <div class="slide">
+            <img src="/img/minecraft.jpg" alt="MINECRAFT">
+          </div>
+          <div class="slide">
+            <img src="/img/nintendo.jpg" alt="NINTENDO">
+          </div>
+          <div class="slide">
+            <img src="/img/mario.jpg" alt="MARIO">
+          </div>
+          <div class="slide">
+            <img src="/img/zelda.jpg" alt="ZELDA">
+          </div>
+      </div>
+ 
+    <script src="/js/trabajo.js"></script>
+</body>
+</html>
