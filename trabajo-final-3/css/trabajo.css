@@ -7,13 +7,13 @@
 
 .full-page{
 
-    height: 100%;
-    width: 100%;
+    height: 196%;
+    width: 102%;
     background-image:url(/img/fonfo\ \(1\).jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
-    margin: -8px -8px -8px -8px;
+    margin: -10px -10px -10px -10px;
   background-color: black;
 }
 
@@ -21,10 +21,10 @@
 
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     padding-left: 50px;
     padding-right: 30px;
-    padding-top: 50px;
+    padding-top: 15px;
 }
 
 nav{
@@ -85,12 +85,12 @@ a
 
 .form-box{
 
-    width: 380px;
-    height: 480px;
+    width: 450px;
+    height: 500px;
     position: relative;
     margin: 2% auto;
     background: rgba(0,0,0,0.3);
-    padding: 10px;
+    padding: 80px;
     overflow: hidden;
     margin-top:  0%;
 }
@@ -98,7 +98,7 @@ a
 .button-box{
 
     width: 220px;
-    margin: 35px auto;
+    margin: 15px auto;
     position: relative;
     box-shadow: 0 0 20px 9px white;
     border-radius: 30px;
@@ -128,7 +128,7 @@ a
 
 .input-group-login{
 
-    top: 150px;
+    top: 210px;
     position: absolute;
     width: 280px;
     transition: .5s;
@@ -136,14 +136,14 @@ a
 
 .input-group-register{
 
-    top: 120px;
+    top: 180px;
     position: absolute;
     width: 280px;
     transition: .5s;
 }
 
 .inpunt-field{
-    width: 100%;
+    width: 130%;
     padding: 10px 0;
     margin: 5px 0;
     border-left: 0;
@@ -202,88 +202,60 @@ span{
     font-size: 15;
 }
 
-/* slider */
+* {
 
-.slider {
-    width: 30%;
-    height: 30%;
-    position: relative;
-    text-align: center;
-    bottom: -200px;
-    overflow: fixed;
-    
-  
-  }
-  
-  .slide {
-    width: -20%;
-    height: -20%;
-    position: absolute;
-    animation: slideShow 12s infinite;
-    opacity: 0;
-  }
-   
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+}
 
+h2{
 
+  text-align: center;
+  margin-top: -30px;
+  font-size: 2rem;
+}
 
-    
-  .slide:nth-child(1) {
-    animation-delay: 0s;
-  }
+.slider-frame{
 
+  width: 1350px;
+  height: 700px;
+  margin: 480px auto 0;
+  bottom: 35%;
+}
 
-  
-  
-  .slide:nth-child(2) {
-    animation-delay: 4s;
-  }
-  
-  .slide:nth-child(3) {
-    animation-delay: 8s;
-  }
+.slider-frame ul{
 
-  .slide:nth-child(4) {
-    animation-delay: 12s;
-  }
+  display: flex;
+  height: -10px;
+  position: absolute;
+  width: 380%;
+  animation: slide 16s infinite alternate ease-in-out;
+}
 
-  .slide:nth-child(5) {
-    animation-delay: 16s;
-  }
+.slider-frame li{
 
-  .slide:nth-child(6) {
-    animation-delay: 20s;
-  }
+  list-style: none;
+  width: 200%;
+}
 
-  .slide:nth-child(7) {
-    animation-delay: 24s;
-  }
+.slider-frame img{
 
-  .slide:nth-child(8) {
-    animation-delay: 28s;
-  }
+  width: 100%;
+  height: auto; 
+}
 
-  .slide:nth-child(9) {
-    animation-delay: 32s;
-  }
-  
-  @keyframes slideShow {
-    0% {
-      opacity: 0;
-    }
-  
-    8% {
-      opacity: 1;
-    }
-  
-    33% {
-      opacity: 1;
-    }
-  
-    41% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 0;
-    }
-  }
+@keyframes slide{
+
+  0% {margin-left: 0%;}
+  20% {margin-left: 0%;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  95% {margin-left: -300%;}
+}

@@ -1,11 +1,20 @@
-const slider = document.querySelector('.slider');
-const slides = slider.querySelectorAll('.slide');
-let currentSlide = 0;
+document.addEventListener("DOMContentLoaded", function(){
 
-function nextSlide() {
-  slides[currentSlide].style.opacity = 0;
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].style.opacity = 1;
-}
+  const slider = document.querySelector('.slider');
+  let counter =0;
 
-setInterval(nextSlide, 8000); // Change slide every 4 seconds
+  setInterval(()=>{
+      slider.style.transition = "transform 0.5s ease-in-out";
+      slider.style.transform= `translateX(${-counter * 100}%)`;
+
+      counter++;
+
+      if(counter === slider.children.length){
+          setTimeout(()=>{
+              slider.style.transition = "none";
+              slider.style.transform = 'translateX(0)';
+              counter = 0;
+          },500)
+      }
+  },3000);
+}); 
