@@ -1,0 +1,38 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+
+    height: 100px;
+    width: auto;
+    background-color: #8C8C88;
+}
+
+footer{
+
+    height: 100px;
+    width: auto;
+    background-color: #202426;
+}
+
+nav{
+
+    height: 30px;
+    width: auto;
+    background-color: #9DA65D;
+}
+
+main{
+    height: 700px;
+    width: auto;
+    background-color: #6C733D;
+    text-align: center;
+    padding-top: 300px;
+}
+
+h2{
+
+    margin: 40px;
+}

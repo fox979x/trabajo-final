@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de nomina</title>
+
+    <script>
+        function validadorFormulario(){
+            let name = document.forms["formulario"]["fname"].value;
+            let lastname = document.forms["formulario"]["flname"].value;
+            let salary = document.forms["formulario"]["fsalary"].value;
+
+            if(name == "" || lastname == ""  || salary == ""){
+                alert("Debe llenar todos los campos");
+                return false;
+            }
+        }
+    </script>
+
+    <script>
+
+    function imprimirFormulario(){
+        let miFormulario = document.forms["formulario"]
+        let texto = '';
+        for(let elemento of miFormulario){
+            texto += elemento.value + '<br/>';
+        }
+
+        document.getElementById("ver").innerHTML = texto;
+    }
+
+    </script>
+
+</head>
+<body>
+    
+<header>
+
+</header>
+
+<nav>
+
+</nav>
+
+<main>
+
+    <section id="form">
+
+        <h2> Formulario Cliente </h2>
+
+        <form name="formulario" id="formulario">
+
+            nombre <br> <input type="text" name="fname" id="fname"><br><br>
+            apellido <br> <input type="text" name="flname" id="flname"><br><br>
+            salario <br> <input type="number" name="fsalary" id="fsalary"><br><br>
+
+        </form>
+
+        <br><button id="btnenviar" onclick="validadorFormulario() , imprimirFormulario0                  ()">
+            enviar
+        </button>
+
+    </section>
+
+    <section id="print">
+
+        <article>
+
+            <p id="ver">
+
+            </p>
+
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
